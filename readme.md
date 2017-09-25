@@ -96,3 +96,16 @@ Response example
 ],
 ```
 
+#### Get particular account of user
+```
+GET /accounts/:userId
+```
+Response example
+```
+{
+    "account_id": 3,
+    "name": "Dog's account",
+    "active": false,
+    "money": 100
+}
+```

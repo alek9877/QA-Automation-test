@@ -36,12 +36,253 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});
-	it('Get user 1', (done) => {
+	it('Check user with id:1 for "user_id"', (done) => {
 		api.get('/users/1')
 			.set('authorization', login)
 			.then((res) => {
-				// we expect the user_id response is 1.
+				// we expect that user_id of user will be 1.
 				expect(res.body.user_id).to.be.equal(1);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:1 for "name"', (done) => {
+		api.get('/users/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be "User The One" .
+				expect(res.body.name).to.be.equal("User The One");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:1 for "title"', (done) => {
+		api.get('/users/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be "Pljeskavica master" .
+				expect(res.body.title).to.be.equal("Pljeskavica master");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:1 for "active"', (done) => {
+		api.get('/users/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be true .
+				expect(res.body.active).to.be.true;
+				done();
+			}).
+		catch(done);
+	});
+
+
+	it('Check user with id:2 for "user_id"', (done) => {
+		api.get('/users/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that user_id of user will be 2.
+				expect(res.body.user_id).to.be.equal(2);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:2 for "name"', (done) => {
+		api.get('/users/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be "User The Two" .
+				expect(res.body.name).to.be.equal("User The Two");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:2 for "title"', (done) => {
+		api.get('/users/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be "Rakija master" .
+				expect(res.body.title).to.be.equal("Rakija master");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:2 for "active"', (done) => {
+		api.get('/users/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be true .
+				expect(res.body.active).to.be.true;
+				done();
+			}).
+		catch(done);
+	});
+
+
+	it('Check user with id:3 for "user_id"', (done) => {
+		api.get('/users/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that user_id of user will be undefined.
+				expect(res.body.user_id).to.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check user with id:3 for "name"', (done) => {
+		api.get('/users/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be undefined .
+				expect(res.body.name).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:3 for "title"', (done) => {
+		api.get('/users/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be undefined .
+				expect(res.body.title).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:3 for "active"', (done) => {
+		api.get('/users/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be undefined .
+				expect(res.body.active).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+
+
+	it('Check user with id:4 for "user_id"', (done) => {
+		api.get('/users/4')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that user_id of user will be undefined.
+				expect(res.body.user_id).to.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check user with id:4 for "name"', (done) => {
+		api.get('/users/4')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be undefined .
+				expect(res.body.name).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:4 for "title"', (done) => {
+		api.get('/users/4')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be undefined .
+				expect(res.body.title).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:4 for "active"', (done) => {
+		api.get('/users/4')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be undefined .
+				expect(res.body.active).to.be.equal(undefined);
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check user with id:5 for "user_id"', (done) => {
+		api.get('/users/5')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that user_id of user will be 5.
+				expect(res.body.user_id).to.be.equal(5);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:5 for "name"', (done) => {
+		api.get('/users/5')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be "The Master" .
+				expect(res.body.name).to.be.equal("The Master");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:5 for "title"', (done) => {
+		api.get('/users/5')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be "Evil timelord" .
+				expect(res.body.title).to.be.equal("Evil timelord");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:5 for "active"', (done) => {
+		api.get('/users/5')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be true .
+				expect(res.body.active).to.be.true;
+				done();
+			}).
+		catch(done);
+	});
+
+
+	it('Check user with id:6 for "user_id"', (done) => {
+		api.get('/users/6')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that user_id of user will be 5.
+				expect(res.body.user_id).to.be.equal(6);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:6 for "name"', (done) => {
+		api.get('/users/6')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of user will be "The Doctor" .
+				expect(res.body.name).to.be.equal("The Doctor");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:6 for "title"', (done) => {
+		api.get('/users/6')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that title of user will be "Good timelord" .
+				expect(res.body.title).to.be.equal("Good timelord");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check user with id:6 for "active"', (done) => {
+		api.get('/users/6')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of user will be true .
+				expect(res.body.active).to.be.true;
 				done();
 			}).
 		catch(done);
@@ -58,7 +299,7 @@ describe('Tests', () => {
 		catch(done);
 	});	
 
-		it('User inactive', (done) => {
+	it('User inactive', (done) => {
 		api.get('/users/3')
 			.set('authorization', login)
 			.then((res) => {
@@ -68,7 +309,7 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});
-		it('Test error message with user_id=5', (done) => {
+	it('Test error message with user_id=5', (done) => {
 		api.get('/users/5/accounts')
 			.set('authorization', login)
 			.then((res) => {
@@ -78,7 +319,7 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});	
-		it('User title check', (done) => {
+	it('User title check', (done) => {
 		api.get('/users/1')
 			.set('authorization', login)
 			.then((res) => {
@@ -88,7 +329,7 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});
-		it('User name check', (done) => {
+	it('User name check', (done) => {
 		api.get('/users/6')
 			.set('authorization', login)
 			.then((res) => {
@@ -98,5 +339,140 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});
-	
+
+//Accounts 
+
+	it('Check account with id:1 for "account_id"', (done) => {
+		api.get('/accounts/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that account_id of account_id=1 will be 1.
+				expect(res.body.account_id).to.be.equal(1);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:1 for "name"', (done) => {
+		api.get('/accounts/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of account_id=1 will be "Wife's account".
+				expect(res.body.name).to.be.equal("Wife's account");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:1 for "active"', (done) => {
+		api.get('/accounts/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of account_id=1 will be true.
+				expect(res.body.active).to.be.true;
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check account with id:1 for "money"', (done) => {
+		api.get('/accounts/1')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that money of account_id=1 will be 100.
+				expect(res.body.money).to.be.equal(100);
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check account with id:2 for "account_id"', (done) => {
+		api.get('/accounts/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that account_id of account_id=2 will be 2.
+				expect(res.body.account_id).to.be.equal(2);
+				done();
+			}).
+		catch(done);
+	});
+
+	it('Check account with id:2 for "name"', (done) => {
+		api.get('/accounts/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of account_id=2 will be "Cat's account".
+				expect(res.body.name).to.be.equal("Cat's account");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:2 for "active"', (done) => {
+		api.get('/accounts/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of account_id=1 will be true.
+				expect(res.body.active).to.be.true;
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:2 for "money"', (done) => {
+		api.get('/accounts/2')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that money of account_id=1 will be 150.
+				expect(res.body.money).to.be.equal(150);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:3 for "account_id"', (done) => {
+		api.get('/accounts/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that account_id of account_id=3 will be 3.
+				expect(res.body.account_id).to.be.equal(3);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:3 for "name"', (done) => {
+		api.get('/accounts/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that name of account_id=3 will be "Dog's account".
+				expect(res.body.name).to.be.equal("Dog's account");
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:3 for "active"', (done) => {
+		api.get('/accounts/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that active of account_id=1 will be false.
+				expect(res.body.active).to.be.false;
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:3 for "money"', (done) => {
+		api.get('/accounts/3')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that money of account_id=1 will be 100.
+				expect(res.body.money).to.be.equal(100);
+				done();
+			}).
+		catch(done);
+	});
+	it('Check account with id:4', (done) => {
+		api.get('/accounts/4')
+			.set('authorization', login)
+			.then((res) => {
+				// we expect that response of account_id=4 will be false.
+				expect(res.body).to.be.false;
+				done();
+			}).
+		catch(done);
+	});
 });
