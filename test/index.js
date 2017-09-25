@@ -83,7 +83,7 @@ describe('Tests', () => {
 			.set('authorization', login)
 			.then((res) => {
 				// we expect that title of user_id=4 will be "Drugstore master".
-				expect(res.body.title).to.be.equal("Pljeskavica master");
+				expect(res.body.title).to.be.not.equal("Pljeskavica mast");
 				done();
 			}).
 		catch(done);
@@ -98,4 +98,5 @@ describe('Tests', () => {
 			}).
 		catch(done);
 	});
+	
 });

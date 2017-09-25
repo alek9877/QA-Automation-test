@@ -155,6 +155,7 @@ app.get('/users/:userId', (req, res) => {
 	}
 });
 
+
 // get single user accounts
 app.get('/users/:userId/accounts', (req, res) => {
 	try {
@@ -181,4 +182,27 @@ app.get('/users/:userId/accounts', (req, res) => {
 		res.send(errorResponse(error))
 	}
 });
+
+// get single account
+app.get('/accounts/:userId', (req, res) => {
+	try {
+		if (req.headers.authorization !== accessToken) {
+			throw new Error('Missing authorization token');
+		}
+alek = false;
+		for (var i = accounts.length - 1; i >= 0; i--) {
+			for (var j = accounts[i].length - 1; j >= 0; j--) {
+				if(accounts[i][j].account_id == req.params.userId){
+					alek= accounts[i][j];
+					break;
+				}
+			}
+		}
+		res.send(alek);
+	} catch (error) {
+		res.send(errorResponse(error))
+	}
+});
+
+
 
